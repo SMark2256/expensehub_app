@@ -8,13 +8,13 @@ import reportWebVitals from "./reportWebVitals";
 
 // Your Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
-    measurementId: "YOUR_MEASUREMENT_ID", // Optional
+    apiKey: "AIzaSyDz46SaT3U0Klwx9UMOJxRys60vUSkfnpQ",
+    authDomain: "expensehub-8508d.firebaseapp.com",
+    projectId: "expensehub-8508d",
+    storageBucket: "expensehub-8508d.appspot.com",
+    messagingSenderId: "628288553379",
+    appId: "1:628288553379:web:341793de2dacbdb5045a16",
+    measurementId: "G-HB024YT93D",
 };
 
 // Initialize Firebase

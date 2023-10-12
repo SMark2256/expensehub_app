@@ -15,7 +15,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Learn React FASZ
+                    Learn about Homi Bálint
                 </a>
             </header>
         </div>
