@@ -1,23 +1,30 @@
-import logo from "./logo.svg";
-import "./App.css";
+// App.js
+import React, { useState, useEffect } from "react";
+import db from "./utils/firebaseConfig"; // Importáld a saját Firebase inicializációt és adatforrásodat
+import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Az adatok lekérése a Firebase Realtime Database-ból
+        db.getList("users").then((response) => {
+            setData(response.data);
+            setLoading(false);
+        });
+    }, []);
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn about Homi Bálint
-                </a>
-            </header>
+        <div>
+            {loading ? (
+                <p>Loading...</p>
+            ) : (
+                <div>
+                    {/* Az alkalmazás többi része, amely használja a letöltött adatokat */}
+                    <RegistrationForm data={data} />
+                </div>
+            )}
         </div>
     );
 }
