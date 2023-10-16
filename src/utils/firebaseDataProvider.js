@@ -72,9 +72,13 @@ const dataProvider = {
 		}
 	},
 	deleteMany: async (resource, ids) => {
+		console.log('resource', resource)
+
+		console.log(ids)
+
 		try {
 			const resourceRef = ref(db, resource)
-			const promises = ids.map(id => remove(ref(resourceRef, id)))
+			const promises = ids.ids.map(id => remove(ref(resourceRef, id)))
 			await Promise.all(promises)
 			return { data: ids }
 		} catch (error) {
