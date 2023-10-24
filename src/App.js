@@ -6,6 +6,7 @@ import AdminComp from './Admin'
 function App() {
 	const [data, setData] = useState([])
 	const [loading, setLoading] = useState(true)
+	const [loadin2, setLoading2] = useState(true)
 
 	useEffect(() => {
 		// Az adatok lekérése a Firebase Realtime Database-ból
