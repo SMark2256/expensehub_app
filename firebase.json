@@ -1,13 +1,7 @@
 {
-    "hosting": {
-        "site": "expensehub",
-        "public": "build",
-        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-        "rewrites": [
-            {
-                "source": "**",
-                "destination": "/index.html"
-            }
-        ]
-    }
+	"hosting": {
+		"site": "expensehub",
+		"public": "build",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
 }
